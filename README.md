@@ -1,187 +1,278 @@
-# mechanistic_interp_9000
+### Mechanistic Interpretability Self Study + Research (focus on Cyber Security)
 Practical applications of Mechanistic interpretability roadmap by Animaniac9000 and Leshleon
 
-Phase 0 (2–3 days): Prerequisites
+------------------------------------------------------------------------
 
-Goal: Fill any gaps, don't master everything.
+# Mechanistic Interpretability Roadmap (12 Weeks)
 
-Read
-Neel's Getting Started Guide
-Barebones Prerequisites (linked in the guide)
-Make sure you understand
-Matrix multiplication
-Backpropagation
-Embeddings
-Self-attention
-Residual connections
-LayerNorm
+> Based primarily on Neel Nanda's recommended learning path,
+> supplemented with widely-used community resources.
 
-If any of these feel shaky, review only those topics.
+------------------------------------------------------------------------
 
-Phase 1 (Week 1): Learn Transformers Properly
-Watch
+## Goals
 
-Neel's What is a Transformer?
+By the end of this roadmap you should be able to:
 
-(linked from his Quickstart)
+-   Understand transformer internals
+-   Use TransformerLens confidently
+-   Reproduce classic mechanistic interpretability experiments
+-   Read major papers without getting lost
+-   Conduct small original research projects
+-   Publish notebooks or blog posts documenting your findings
 
-Mechanistic Interpretability Quickstart Guide
+------------------------------------------------------------------------
 
-Then implement GPT-2
+# Phase 0 (2--3 Days): Prerequisites
 
-Neel strongly recommends implementing GPT-2 from scratch.
+## Read
 
-Use:
+-   Neel Nanda -- Getting Started:
+    https://www.neelnanda.io/mechanistic-interpretability/getting-started-old
+
+-   Neel Nanda -- Quickstart:
+    https://www.neelnanda.io/mechanistic-interpretability/quickstart-old
+
+## Review only if needed
+
+-   Linear Algebra
+-   Matrix Multiplication
+-   Gradients & Backpropagation
+-   Embeddings
+-   Self-Attention
+-   Residual Connections
+-   LayerNorm
+
+**Goal:** Know enough to begin experimenting.
+
+------------------------------------------------------------------------
+
+# Phase 1 (Week 1): Learn Transformers
+
+## Primary Resource
+
+Neel Nanda's Quickstart
+
+https://www.neelnanda.io/mechanistic-interpretability/quickstart-old
+
+## Hands-on
+
+Implement a small GPT model using:
 
 ARENA Transformer Exercises
 
-Don't skip the exercises.
+https://arena-chapter1-transformer-interp.streamlit.app/
 
-Outcome
+### Understand
 
-You should be able to explain
+-   Attention
+-   Q, K, V
+-   Multi-head attention
+-   Residual stream
+-   MLP blocks
+-   Positional embeddings
+-   Logits
 
-attention
-QKV
-MLP blocks
-residual stream
-logits
+**Checkpoint:** Explain a transformer from memory.
 
-without looking anything up.
+------------------------------------------------------------------------
 
-Phase 2 (Week 2): Learn TransformerLens
+# Phase 2 (Week 2): Learn TransformerLens
 
-This is THE library for mechanistic interpretability.
+## Install
 
-Read
-TransformerLens Documentation
-Install
-TransformerLens GitHub
-Complete
-Main Demo
-Activation Cache
-Hooks
-run_with_cache()
+https://github.com/TransformerLensOrg/TransformerLens
 
-Main demo:
+## Documentation
 
-TransformerLens Main Demo Notebook
+https://transformerlensorg.github.io/TransformerLens/content/getting_started_mech_interp.html
 
-Goal
+## Complete
 
-By the end you should be comfortable doing
+-   Main Demo Notebook
+-   Hooks
+-   Activation Cache
+-   run_with_cache()
 
+Demo notebook:
+
+https://transformerlensorg.github.io/TransformerLens/generated/demos/Main_Demo.html
+
+**Goal**
+
+Be comfortable with:
+
+``` python
 logits, cache = model.run_with_cache(prompt)
+```
 
 and inspecting activations.
 
-Phase 3 (Week 3): Learn Core Techniques
+------------------------------------------------------------------------
 
-Read the glossary as needed.
+# Phase 3 (Week 3): Core Interpretability Techniques
 
-Mechanistic Interpretability Glossary
+Use Neel's glossary:
 
-Focus on learning
+https://www.neelnanda.io/mechanistic-interpretability
 
-activation patching
-attribution patching
-residual stream
-logit lens
-direct logit attribution
-induction heads
-superposition
+Learn:
 
-Don't memorize—use them.
+-   Activation patching
+-   Attribution patching
+-   Residual stream
+-   Direct logit attribution
+-   Logit lens
+-   Attention patterns
+-   Induction heads
+-   Superposition
 
-Phase 4 (Week 4): Reproduce Existing Research
+Don't memorize---experiment.
 
-Neel recommends reproducing work before trying new ideas.
+------------------------------------------------------------------------
 
-Do these tutorials.
+# Phase 4 (Week 4): Reproduce Existing Work
 
-Induction Heads
-IOI (Indirect Object Identification)
-Activation Patching
+Use the TransformerLens tutorials:
 
-Available in
+https://transformerlensorg.github.io/TransformerLens/content/tutorials.html
 
-TransformerLens Tutorials
-Phase 5 (Weeks 5–6): Read the Classic Papers
+Reproduce:
 
-Don't binge-read.
+-   Induction Heads
+-   IOI (Indirect Object Identification)
+-   Activation Patching
 
-Read one paper.
+Goal:
 
-Run code.
+Modify experiments and observe what changes.
 
-Repeat.
+------------------------------------------------------------------------
 
-Order
-Transformer Circuits
-Induction Heads
-Toy Models of Superposition
-Interpretability in the Wild
+# Phase 5 (Weeks 5--6): Read the Classic Papers
 
-Neel has walkthroughs for all of them:
+Read one paper at a time and immediately run related code.
 
-Neel's Mechanistic Interpretability Hub
-Phase 6 (Weeks 7–8): Build Small Projects
+Recommended order:
 
-Examples
+1.  Transformer Circuits
+2.  Induction Heads
+3.  Toy Models of Superposition
+4.  Interpretability in the Wild
 
-Find a punctuation head.
-Find a copying head.
-Find a capitalization feature.
-Study a neuron responding to numbers.
-Visualize attention over names.
+Use Neel's walkthroughs:
 
-The goal isn't novelty—it's developing research intuition.
+https://www.neelnanda.io/mechanistic-interpretability
 
-Phase 7 (Weeks 9–12): Start Original Research
+------------------------------------------------------------------------
 
-Read
+# Phase 6 (Weeks 7--8): Mini Research Projects
 
-200 Concrete Open Problems in Mechanistic Interpretability (linked from the Quickstart)
+Ideas:
 
-Pick ONE.
+-   Find a punctuation head
+-   Find a copying head
+-   Analyze number neurons
+-   Study capitalization features
+-   Inspect name-mover heads
+-   Explore residual stream changes
 
-Spend two weeks on it.
+Document everything.
 
-Write everything down.
+------------------------------------------------------------------------
 
-Even negative results are useful.
+# Phase 7 (Weeks 9--12): Original Research
 
-Weekly Reading Routine
+Read:
+
+200 Concrete Open Problems in Mechanistic Interpretability
+
+(linked from Neel's Quickstart)
+
+Choose ONE problem.
+
+Spend several weeks:
+
+-   Form hypotheses
+-   Run experiments
+-   Analyze failures
+-   Write conclusions
+
+Even negative results are valuable.
+
+------------------------------------------------------------------------
+
+# Weekly Routine
 
 Every week:
 
-One walkthrough
-One notebook
-One small experiment
-One page of notes summarizing what you learned
-Optional (Highly Recommended)
+-   Read one walkthrough
+-   Complete one notebook
+-   Run one experiment
+-   Write one page of notes
+-   Push everything to GitHub
 
-Once you're comfortable:
+------------------------------------------------------------------------
 
-Read the 2024 survey paper:
+# Optional Reading
 
-A Practical Review of Mechanistic Interpretability for Transformer-Based Language Models
+After the basics:
 
-This gives you a broad view of techniques and open questions after you've gained some hands-on experience.
+A Practical Review of Mechanistic Interpretability for Transformer-Based
+Language Models
 
-Your 12-Week Checklist
-Week	Goal
-1	Learn transformers + implement GPT-2 (ARENA)
-2	Master TransformerLens
-3	Learn activation patching, logit lens, residual stream
-4	Reproduce Induction Heads and IOI
-5	Read Transformer Circuits
-6	Read Toy Models of Superposition
-7	Build a small interpretability project
-8	Build another project and document it
-9	Choose an open problem
-10	Conduct experiments
-11	Analyze and refine
-12	Publish a notebook or blog post on your findings
+https://arxiv.org/abs/2407.02646
 
-This is essentially the path Neel advocates: learn the minimum fundamentals, become fluent with TransformerLens, reproduce existing work, then move into original experiments as soon as possible. It's much more research-oriented than a traditional ML curriculum and gets you doing real mechanistic interpretability work early.
+------------------------------------------------------------------------
+
+# 12-Week Checklist
+
+  Week   Goal
+  ------ ----------------------------------------
+  1      Learn transformers and implement GPT
+  2      Master TransformerLens
+  3      Learn activation patching & logit lens
+  4      Reproduce Induction Heads & IOI
+  5      Read Transformer Circuits
+  6      Read Toy Models of Superposition
+  7      Build first interpretability project
+  8      Build second project
+  9      Pick an open problem
+  10     Run experiments
+  11     Refine and analyze
+  12     Publish a notebook or blog post
+
+------------------------------------------------------------------------
+
+# Primary Resources
+
+## Neel Nanda
+
+-   Quickstart:
+    https://www.neelnanda.io/mechanistic-interpretability/quickstart-old
+
+-   Getting Started:
+    https://www.neelnanda.io/mechanistic-interpretability/getting-started-old
+
+-   Mechanistic Interpretability Hub:
+    https://www.neelnanda.io/mechanistic-interpretability
+
+## TransformerLens
+
+-   GitHub: https://github.com/TransformerLensOrg/TransformerLens
+
+-   Docs: https://transformerlensorg.github.io/TransformerLens/
+
+## ARENA
+
+https://arena-chapter1-transformer-interp.streamlit.app/
+
+------------------------------------------------------------------------
+
+## Philosophy
+
+Learn the minimum theory required, then spend most of your time running
+experiments.
+
+Mechanistic interpretability is learned by investigating models---not by
+reading endlessly.
