@@ -1,0 +1,37 @@
+# environments
+.venv
+
+## Python
+__pycache__/
+*.pyc
+
+# Virtual env
+venv/
+.env/
+.venv/
+
+# Data files
+*.csv
+*.xlsx
+*.xls
+*.parquet
+*.pkl
+*.pickle
+*.zip
+
+# Logs
+*.log
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Meta data
+*Zone.Identifier*
+
+# Other
+*.png
+*.html
